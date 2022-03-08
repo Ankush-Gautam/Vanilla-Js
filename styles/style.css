@@ -1,0 +1,108 @@
+/* ------------------- My Variables ----------------------*/
+
+:root {
+  --clr-primary: royalblue;
+  --clr-bg: aliceblue;
+
+  --box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.6);
+  --font-primary: "Montserrat", sans-serif;
+  --transition: all 200ms ease;
+}
+
+/* ------------------- Universal ----------------------*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--clr-bg);
+  font-family: var(--font-primary);
+}
+
+/* ------------------- Reusable ----------------------*/
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+.d-flex {
+  display: flex;
+}
+.selected {
+  color: var(--clr-primary);
+  text-decoration: underline;
+}
+/* button */
+.btn {
+  font-size: 1.5rem;
+  background-color: #fff;
+  border: 3px solid black;
+  text-transform: uppercase;
+  border-radius: 0.5rem;
+  letter-spacing: 0.3rem;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 0 1rem;
+  transition: var(--transition);
+  box-shadow: var(--box-shadow);
+}
+
+.btn:hover {
+  border: 3px solid var(--clr-primary);
+  color: var(--clr-primary);
+}
+a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  color: #000;
+  margin-right: 1rem;
+}
+a:hover {
+  color: royalblue;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+}
+
+/* ------------------- Nav  ----------------------*/
+
+.nav__container {
+  background-color: #fff;
+  padding: 0 1rem;
+  display: grid;
+  grid-template-columns: 20% 80%;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: var(--box-shadow);
+}
+.nav__container h1 {
+  font-size: 2rem;
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.4rem;
+}
+
+/* ------------------- Main ----------------------*/
+
+.main__container {
+  height: 86vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.main__container h1 {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+  padding: 0.5rem 2rem;
+  background-color: #fff;
+}
+.main__container span {
+  color: var(--clr-primary);
+  letter-spacing: 0.2rem;
+  padding: 0 1rem;
+}
