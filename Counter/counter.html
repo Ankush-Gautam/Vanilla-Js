@@ -36,15 +36,49 @@
 
     <main>
       <div class="container main__container">
-        <h1 id="count">1</h1>
-        <div class="d-flex">
-          <button class="btn">Decrease</button>
-          <button class="btn">Increase</button>
+        <h2>Counter</h2>
+        <h1 id="count">0</h1>
+        <div class="btn__container">
+          <button class="btn decrease">Decrease</button>
+          <button class="btn reset">Reset</button>
+          <button class="btn increase">Increase</button>
         </div>
       </div>
     </main>
 
     <!-- JAVASCRIPT -->
-    <script></script>
+    <script>
+      //intializing counter
+      let counter = 0;
+
+      //selecting buttons
+      const btns = document.querySelectorAll(".btn");
+
+      //selecting count display
+      const value = document.querySelector("#count");
+
+      btns.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+          const btnpress = e.currentTarget.classList;
+          if (btnpress.contains("decrease")) {
+            counter--;
+          } else if (btnpress.contains("increase")) {
+            counter++;
+          } else {
+            counter = 0;
+          }
+
+          if (counter < 0) {
+            value.style.color = "crimson";
+          } else if (counter > 0) {
+            value.style.color = "green";
+          } else {
+            value.style.color = "#000";
+          }
+
+          value.textContent = counter;
+        });
+      });
+    </script>
   </body>
 </html>
