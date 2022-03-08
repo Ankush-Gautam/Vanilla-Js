@@ -122,5 +122,12 @@ ul {
   .main__container {
     grid-template-columns: 1fr;
     text-align: center;
+    gap: 0;
+  }
+  .btn__container {
+    flex-direction: column;
+  }
+  .btn {
+    margin: 1rem 0;
   }
 }
